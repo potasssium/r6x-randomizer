@@ -1,0 +1,5 @@
+.App { text-align: center; padding: 2rem; }
+.controls { margin: 1rem 0; }
+.operator-card { border: 1px solid #ccc; padding: 1rem; border-radius: 8px; display: inline-block; text-align: left; }
+.operator-icon { width: 100px; height: 100px; object-fit: contain; }
+.playstyles ul { margin: 0; padding-left: 1.2rem; }
