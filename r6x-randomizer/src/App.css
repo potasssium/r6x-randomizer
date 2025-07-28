@@ -58,28 +58,6 @@
   box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.3);
 }
 
-/* Remove the conflicting .controls button styles */
-/* .controls button {
-  background: linear-gradient(45deg, #666, #888);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.controls button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(45deg, #888, #666);
-} */
-
 .controls .role-button {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -301,17 +279,17 @@
 .weapon-loadout {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: rgba(51, 51, 51, 0.8);
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   max-width: 90%;
   position: relative;
 }
 
 .weapon-loadout h3 {
   margin: 0 0 1rem 0;
-  color: #495057;
+  color: white;
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -333,7 +311,7 @@
 
 .weapon-name {
   font-weight: 600;
-  color: #495057;
+  color: white;
   margin: 0.5rem 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -350,15 +328,15 @@
 }
 
 .attachments-list li {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(51, 51, 51, 0.6);
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  color: #333;
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 500;
@@ -371,17 +349,17 @@
 }
 
 .gadget-loadout {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(51, 51, 51, 0.8);
   padding: 1.5rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(102, 102, 102, 0.3);
   margin-top: 1.5rem;
   position: relative;
 }
 
 .gadget-loadout h3 {
-  color: #495057;
+  color: white;
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -403,15 +381,15 @@
 }
 
 .gadget-name {
-  background: rgba(102, 102, 102, 0.1);
-  color: #495057;
+  background: rgba(51, 51, 51, 0.6);
+  color: white;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   font-weight: 500;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 1px solid rgba(102, 102, 102, 0.2);
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 @media (max-width: 768px) {
