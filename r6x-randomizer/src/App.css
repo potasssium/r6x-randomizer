@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -123,16 +123,16 @@
 }
 
 .operator-card { 
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(26, 26, 26, 0.7);
   border: none;
   padding: 2rem;
   border-radius: 20px;
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  color: #333;
+  color: white;
 }
 
 .operator-header {
@@ -279,9 +279,9 @@
 .weapon-loadout {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background: rgba(51, 51, 51, 0.8);
+  background: #1a1a1a;
   border-radius: 12px;
-  border: 1px solid rgba(102, 102, 102, 0.3);
+  border: 1px solid #444;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   max-width: 90%;
   position: relative;
@@ -294,7 +294,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 2px solid rgba(102, 102, 102, 0.3);
+  border-bottom: 2px solid #444;
   padding-bottom: 0.5rem;
   max-width: 60%;
 }
@@ -328,14 +328,14 @@
 }
 
 .attachments-list li {
-  background: rgba(51, 51, 51, 0.6);
+  background: #222;
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(102, 102, 102, 0.3);
+  border: 1px solid #444;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -349,11 +349,11 @@
 }
 
 .gadget-loadout {
-  background: rgba(51, 51, 51, 0.8);
+  background: #1a1a1a;
   padding: 1.5rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(102, 102, 102, 0.3);
+  border: 1px solid #444;
   margin-top: 1.5rem;
   position: relative;
 }
@@ -365,7 +365,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 2px solid rgba(102, 102, 102, 0.3);
+  border-bottom: 2px solid #444;
   padding-bottom: 0.5rem;
   width: 60%;
 }
@@ -381,7 +381,7 @@
 }
 
 .gadget-name {
-  background: rgba(51, 51, 51, 0.6);
+  background: #222;
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -389,7 +389,7 @@
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 1px solid rgba(102, 102, 102, 0.3);
+  border: 1px solid #444;
 }
 
 @media (max-width: 768px) {
