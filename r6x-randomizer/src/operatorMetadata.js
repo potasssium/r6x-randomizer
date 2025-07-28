@@ -37,7 +37,7 @@ const operatorPictureMap = {
   "Ram": `${process.env.PUBLIC_URL}/assets/operators/pictures/Ram_R6_render.webp`,
   "Sens": `${process.env.PUBLIC_URL}/assets/operators/pictures/Sens_-_Full_Body.webp`,
   "Sledge": `${process.env.PUBLIC_URL}/assets/operators/pictures/Sledge_-_Full_Body.png`,
-  "Thatcher": `${process.env.PUBLIC_URL}/assets/operators/pictures/Thatcher_-_Full_Body.webp`,
+  "Thatcher": `${process.env.PUBLIC_URL}/assets/operators/pictures/THATCHER.png`,
   "Thermite": `${process.env.PUBLIC_URL}/assets/operators/pictures/Thermite_-_Full_Body.webp`,
   "Twitch": `${process.env.PUBLIC_URL}/assets/operators/pictures/Twitch_-_Full_Body.png`,
   "Ying": `${process.env.PUBLIC_URL}/assets/operators/pictures/Ying_-_Full_Body.webp`,
