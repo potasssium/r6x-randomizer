@@ -2,7 +2,7 @@
   "name": "r6x-randomizer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/r6x-randomizer-1",
+  "homepage": "https://potasssium.github.io/r6x-randomizer",
   "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
