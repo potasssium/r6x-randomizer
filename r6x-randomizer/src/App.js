@@ -76,7 +76,7 @@ const getUniqueOperators = (role) => {
   }
   
   if (duplicates.length > 0) {
-    console.error(`❌ DUPLICATE OPERATORS FOUND for ${role}s:`, duplicates);
+    console.error(`DUPLICATE OPERATORS FOUND for ${role}s:`, duplicates);
   }
   
   return uniqueOperators;
@@ -97,7 +97,7 @@ const analyzeOperators = () => {
   const duplicates = Object.entries(nameCounts).filter(([name, count]) => count > 1);
   
   if (duplicates.length > 0) {
-    console.error("❌ DUPLICATE OPERATOR NAMES FOUND:");
+    console.error("DUPLICATE OPERATOR NAMES FOUND:");
     duplicates.forEach(([name, count]) => {
       console.error(`  ${name}: appears ${count} times`);
     });
@@ -117,8 +117,6 @@ const analyzeOperators = () => {
   console.log("=== END ANALYSIS ===");
 };
 
-// Placeholder for images
-const placeholder = '/placeholder.png';
 
 function App() {
   const [selectedOp, setSelectedOp] = useState(null);
@@ -136,7 +134,7 @@ function App() {
   }, []);
 
   const pickRandom = (role = roleFilter) => {
-    // Get unique operators for the role to ensure equal distribution
+    // Get unique operators for the role, equal distribution
     const pool = getUniqueOperators(role);
     console.log(`Available ${role}s:`, pool.length, pool.map(op => op.name));
     
@@ -145,7 +143,7 @@ function App() {
       return;
     }
     
-    // Use a more robust random selection
+    // random selection
     const randomIndex = Math.floor(Math.random() * pool.length);
     const op = pool[randomIndex];
     console.log('Selected operator:', op.name);
@@ -170,17 +168,11 @@ function App() {
     let challengeRestrictions = [];
     if (mode === 'challenge') {
       challengeRestrictions = getChallengeRestrictions(op);
-      console.log(`🎯 ${op.name} challenge restrictions:`, challengeRestrictions);
-    }
     
-    // Debug logging for playstyles
-    console.log(`🎯 ${op.name} available playstyles:`, availablePlaystyles);
-    if (op.playstyleOverrides) {
-      console.log(`🎯 ${op.name} has custom playstyle overrides:`, op.playstyleOverrides);
     }
     
     const playstyle = randomFrom(availablePlaystyles);
-    console.log(`🎯 ${op.name} selected playstyle:`, playstyle);
+    console.log(`${op.name} selected playstyle:`, playstyle);
 
     // Randomly select one primary weapon
     const selectedPrimary = randomFrom(op.primaryWeapons);
@@ -492,7 +484,7 @@ function App() {
                   <img 
                     src={selectedOp.primaryLoadout.imageUrl} 
                     alt={selectedOp.primaryLoadout.name + ' image'} 
-                    className="weapon-image"
+                    className={`weapon-image ${selectedOp.primaryLoadout.name.includes('Shield') ? 'weapon-shield' : ''} ${selectedOp.primaryLoadout.name === 'Ballistic Shield' ? 'weapon-ballistic-shield' : ''}`}
                   />
                   <p className="weapon-name">{selectedOp.primaryLoadout.name}</p>
                   <ul className="attachments-list">
@@ -527,7 +519,7 @@ function App() {
                     <img 
                       src={selectedOp.secondaryLoadout.imageUrl} 
                       alt={selectedOp.secondaryLoadout.name + ' image'} 
-                      className="weapon-image"
+                      className={`weapon-image ${selectedOp.secondaryLoadout.name.includes('Shield') ? 'weapon-shield' : ''} ${selectedOp.secondaryLoadout.name === 'Ballistic Shield' ? 'weapon-ballistic-shield' : ''}`}
                     />
                     <p className="weapon-name">{selectedOp.secondaryLoadout.name}</p>
                     <ul className="attachments-list">
@@ -555,11 +547,13 @@ function App() {
                 <section>
                   <div className="gadget-loadout">
                     <h3>Gadget</h3>
-                    <img 
-                      src={getGadgetImage(selectedOp.selectedGadget)} 
-                      alt={selectedOp.selectedGadget + ' image'} 
-                      className="gadget-image" 
-                    />
+                    {getGadgetImage(selectedOp.selectedGadget) && (
+                      <img 
+                        src={getGadgetImage(selectedOp.selectedGadget)} 
+                        alt={selectedOp.selectedGadget + ' image'} 
+                        className={`gadget-image ${selectedOp.selectedGadget === 'EMP Grenade' ? 'gadget-EMP' : ''} ${selectedOp.selectedGadget === 'Deployable Shield' ? 'gadget-shield' : ''}`}
+                      />
+                    )}
                     <span className="gadget-name">{selectedOp.selectedGadget}</span>
                   </div>
                 </section>

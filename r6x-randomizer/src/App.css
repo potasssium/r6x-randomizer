@@ -368,14 +368,15 @@
   border-bottom: 2px solid #444;
   padding-bottom: 0.5rem;
   width: 60%;
+  margin-top: -2px;
 }
 
 .gadget-image {
-  width: 80px;
-  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
   object-fit: contain;
   position: absolute;
-  top: 2.5rem;
+  top: 2.1rem;
   right: 4.5rem;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -390,6 +391,28 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid #444;
+}
+
+.gadget-EMP {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Shield image sizing */
+.weapon-shield {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.gadget-shield {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Specific shield types */
+.weapon-ballistic-shield {
+  max-width: 140px;
+  max-height: 140px;
 }
 
 @media (max-width: 768px) {

@@ -37,7 +37,7 @@ const operatorPictureMap = {
   "Ram": `${process.env.PUBLIC_URL}/assets/operators/pictures/Ram_R6_render.webp`,
   "Sens": `${process.env.PUBLIC_URL}/assets/operators/pictures/Sens_-_Full_Body.webp`,
   "Sledge": `${process.env.PUBLIC_URL}/assets/operators/pictures/Sledge_-_Full_Body.png`,
-  "Thatcher": `${process.env.PUBLIC_URL}/assets/operators/pictures/THATCHER.png`,
+  "Thatcher": `${process.env.PUBLIC_URL}/assets/operators/pictures/Thatcher_-_Full_Body.webp`,
   "Thermite": `${process.env.PUBLIC_URL}/assets/operators/pictures/Thermite_-_Full_Body.webp`,
   "Twitch": `${process.env.PUBLIC_URL}/assets/operators/pictures/Twitch_-_Full_Body.png`,
   "Ying": `${process.env.PUBLIC_URL}/assets/operators/pictures/Ying_-_Full_Body.webp`,
@@ -97,7 +97,7 @@ const operatorIconMap = {
 };
 
 export const getOperatorIcon = name => {
-  // First check if we have a specific mapping for this operator icon
+  // check if we have a specific mapping for this operator icon
   if (operatorIconMap[name]) {
     return operatorIconMap[name];
   }
@@ -137,12 +137,12 @@ const weaponImageMap = {
   "C8-SFW": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_C8-SFW.png`,
   "CAMRS": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_CAMRS.png`,
   "CSRX 300": `${process.env.PUBLIC_URL}/assets/weapons/R6S_CSRX_300.png`,
-  "Extendable Shield": `${process.env.PUBLIC_URL}/assets/weapons/Extendable-Shield.png`,
+  "Extendable Shield": `${process.env.PUBLIC_URL}/assets/weapons/shields/Extendable-Shield.png`,
   "F2": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_F2.png`,
   "F90": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_F90.png`,
   "FMG-9": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_FMG-9.png`,
   "G36C": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_G36C.png`,
-  "G52-Tactical Shield": `${process.env.PUBLIC_URL}/assets/weapons/G52-Tactical_Shield.webp`,
+  "G52-Tactical Shield": `${process.env.PUBLIC_URL}/assets/weapons/shields/G52-Tactical_Shield.webp`,
   "G8A1": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_G8A1.png`,
   "ITA12L": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_ITA12L.png`,
   "L85A2": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_L85A2.png`,
@@ -179,7 +179,7 @@ const weaponImageMap = {
   "417": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_417.png`,
   "6P41": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_6P41.png`,
   "SASG-12": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_SASG-12.png`,
-  "Ballistic Shield": `${process.env.PUBLIC_URL}/assets/weapons/Ballistic_Shield.webp`,
+  "Ballistic Shield": `${process.env.PUBLIC_URL}/assets/weapons/shields/Ballistic_Shield.webp`,
   
   // Defender Primary Weapons
   "Mx4 Storm": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_Mx4_Storm.png`,
@@ -239,6 +239,8 @@ const weaponImageMap = {
   "Bearing 9": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_BEARING_9.png`,
   "M1911": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_M1911.png`,
   ".44 VENDETTA": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_.44_Mag_Semi-Auto.png`,
+  "GHS-18": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_GHS-18.png`,
+  "Reaper MK2": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_Reaper_MK2.png`,
   
   // Defender Secondary Weapons
   "Bailiff 410": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_Bailiff_410.png`,
@@ -251,7 +253,7 @@ const weaponImageMap = {
 };
 
 export const getWeaponImage = (name, type) => {
-  // First check if we have a specific mapping for this weapon
+  // check if we have a specific mapping for this weapon
   if (weaponImageMap[name]) {
     return weaponImageMap[name];
   }
@@ -261,7 +263,12 @@ export const getWeaponImage = (name, type) => {
 };
 
 export const getGadgetImage = (name) => {
-  // First check if we have a specific mapping for this gadget
+  // Special case
+  if (name === "It's your lucky day, pick your own gadget") {
+    return null;
+  }
+  
+  // check if we have a specific mapping for this gadget
   if (gadgetImageMap[name]) {
     return gadgetImageMap[name];
   }
@@ -326,7 +333,7 @@ const gadgetImageMap = {
   "Hard Breach Charge": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Hard_Breach_Charge.webp`,
   "Smoke Grenade": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Smoke_Grenade.webp`,
   "Stun Grenade": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Stun_Grenade.webp`,
-  "Flashbang": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Flashbang.webp`,
+  "Flashbang": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Stun_Grenade.webp`,
   "Gonne-6": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_GONNE-6.webp`,
   
   // Defender Gadgets
@@ -337,12 +344,12 @@ const gadgetImageMap = {
   "Nitro Cell": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Nitro_Cell.webp`,
   "Observation Blocker": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Observation_Blocker.webp`,
   "Proximity Alarm": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_Proximity_Alarm.webp`,
-  "EMP Grenade": `${process.env.PUBLIC_URL}/assets/gadgets/R6S_EMP_Grenade.webp`
+  "EMP Grenade": `${process.env.PUBLIC_URL}/assets/gadgets/EMP_Grenade_2.webp`
 };
 
 // ATTACKERS
 const operatorData = [
-  { name: "Ace",        role: "attacker", icon: `${process.env.PUBLIC_URL}/assets/operators/icons/ace.png`, primaryDefaults, primaryWeapons: [ 
+  { name: "Ace",        role: "attacker", unit: "NIGHTHAVEN", icon: `${process.env.PUBLIC_URL}/assets/operators/icons/ace.png`, primaryDefaults, primaryWeapons: [ 
     { name: "AK-12", overrides: {barrels: { remove: ["Extended Barrel"]}}},
     { name: "M1014", overrides: {removeSections: ["magnifying"], barrels: { remove: ["Flash Hider", "Compensator", "Muzzle Brake", "Extended Barrel"]}}}
   ], secondaryDefault, secondaryWeapons: [
@@ -369,7 +376,7 @@ const operatorData = [
     { name: "MK17 CQB", overrides: { sights: { remove: ["Magnified A", "Magnified B", "Magnified C"] } } },
     { name: "SR-25", overrides: { 
       sights: { 
-        add: ["Telescopica A", "Telescopica B"] // Add custom sights here
+        add: ["Telescopica A", "Telescopica B"] 
       }
     }}
   ], secondaryDefault, secondaryWeapons: [
@@ -854,7 +861,6 @@ const operatorData = [
     { name: "417", overrides: {sights: { add: ["Telescopic A", "Telescopic B"], barrels: { remove: ["Extended Barrel", "Flash Hider", "Compensator"] } } } },
     { name: "M249", overrides: {removeSections: ["magnifying"], barrels: { remove: ["Extended Barrel", "Suppressor"] } } }
   ], secondaryDefault, secondaryWeapons: [
-    { name: "Reaper MK2", overrides: {removeSections: ["sights", "grips"] } },
     { name: "GHS-18", overrides: {removeSections: ["sights", "grips"] } }
   ], gadgets: ["Smoke Grenade", "Breach Charge"], playstyles: attackPlaystyles.playstyles.playstyle },
 
