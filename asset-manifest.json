@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/r6x-randomizer/static/css/main.db69656a.css",
-    "main.js": "/r6x-randomizer/static/js/main.1799007b.js",
+    "main.css": "/r6x-randomizer/static/css/main.f39114bf.css",
+    "main.js": "/r6x-randomizer/static/js/main.80bf9087.js",
     "static/js/453.bc5d553d.chunk.js": "/r6x-randomizer/static/js/453.bc5d553d.chunk.js",
     "static/media/backdrop.jpg": "/r6x-randomizer/static/media/backdrop.ba32d53176c1f631c8b0.jpg",
     "index.html": "/r6x-randomizer/index.html",
-    "main.db69656a.css.map": "/r6x-randomizer/static/css/main.db69656a.css.map",
-    "main.1799007b.js.map": "/r6x-randomizer/static/js/main.1799007b.js.map",
+    "main.f39114bf.css.map": "/r6x-randomizer/static/css/main.f39114bf.css.map",
+    "main.80bf9087.js.map": "/r6x-randomizer/static/js/main.80bf9087.js.map",
     "453.bc5d553d.chunk.js.map": "/r6x-randomizer/static/js/453.bc5d553d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db69656a.css",
-    "static/js/main.1799007b.js"
+    "static/css/main.f39114bf.css",
+    "static/js/main.80bf9087.js"
   ]
 }
