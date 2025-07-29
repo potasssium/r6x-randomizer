@@ -239,7 +239,7 @@ const weaponImageMap = {
   "Bearing 9": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_BEARING_9.png`,
   "M1911": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_M1911.png`,
   ".44 VENDETTA": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_.44_Mag_Semi-Auto.png`,
-  "GHS-18": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_GHS-18.png`,
+  "GHS-18": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_GSH-18.png`,
   "Reaper MK2": `${process.env.PUBLIC_URL}/assets/weapons/R6S_wpn_Reaper_MK2.png`,
   
   // Defender Secondary Weapons

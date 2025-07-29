@@ -551,7 +551,10 @@ function App() {
                       <img 
                         src={getGadgetImage(selectedOp.selectedGadget)} 
                         alt={selectedOp.selectedGadget + ' image'} 
-                        className={`gadget-image ${selectedOp.selectedGadget === 'EMP Grenade' ? 'gadget-EMP' : ''} ${selectedOp.selectedGadget === 'Deployable Shield' ? 'gadget-shield' : ''}`}
+                        className={`gadget-image ${selectedOp.selectedGadget === 'EMP Grenade' ? 'gadget-EMP' : ''} ${selectedOp.selectedGadget === 'Deployable Shield' ? 'gadget-shield' : ''} ${selectedOp.selectedGadget === 'Observation Blocker' ? 'gadget-Observation_Blocker' : ''} 
+                        ${selectedOp.selectedGadget === 'Nitro Cell' ? 'gadget-Nitro_Cell' : ''} ${selectedOp.selectedGadget === 'Bulletproof Camera' ? 'gadget-Bulletproof_Camera' : ''} 
+                        ${selectedOp.selectedGadget === 'Ballistic Shield' ? 'shield-Ballistic_Shield' : ''} ${selectedOp.selectedGadget === 'G52-Tactical Shield' ? 'shield-g52-tactical-shield' : ''}`}
+                        
                       />
                     )}
                     <span className="gadget-name">{selectedOp.selectedGadget}</span>

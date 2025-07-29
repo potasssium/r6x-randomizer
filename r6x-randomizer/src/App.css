@@ -309,6 +309,16 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
+/* Override weapon-image for shields */
+.weapon-image.weapon-shield {
+  width: auto !important;
+  height: auto !important;
+  max-width: 420px !important;
+  max-height: 220px !important;
+  top: 1rem !important;
+  right: 2rem !important;
+}
+
 .weapon-name {
   font-weight: 600;
   color: white;
@@ -398,21 +408,64 @@
   max-height: 100px;
 }
 
-/* Shield image sizing */
-.weapon-shield {
-  max-width: 120px;
-  max-height: 120px;
+.gadget-Observation_Blocker {
+  max-width: 150px;
+  max-height: 100px;
+  margin-top: 0.6rem;
+  margin-right: -1.2rem;
 }
 
-.gadget-shield {
+.gadget-Nitro_Cell {
+  margin-right: 1.2rem;
+}
+
+.gadget-Bulletproof_Camera {
   max-width: 100px;
-  max-height: 100px;
+}
+
+/* Shield image sizing */
+.weapon-shield {
+  max-width: 420px !important;
+  max-height: 220px !important;
+  width: auto !important;
+  height: auto !important;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-right: -4rem;
+}
+
+
+.gadget-shield {
+  max-width: 100px !important;
+  max-height: 100px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-right: -4rem;
 }
 
 /* Specific shield types */
 .weapon-ballistic-shield {
-  max-width: 140px;
-  max-height: 140px;
+  max-width: 140px !important;
+  max-height: 140px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-right: -4rem;
+}
+
+.weapon-image.g52-tactical-shield {
+  max-width: 420px !important;
+  max-height: 220px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-right: 6rem;
+}
+
+.weapon-shield.shield-Ballistic_Shield {
+  max-width: 420px !important;
+  max-height: 220px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-right: -1.2rem;
 }
 
 @media (max-width: 768px) {
